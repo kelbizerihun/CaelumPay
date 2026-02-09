@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CaelumPay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            margin: 0;
+            padding: 0;
+            background-color: #F3F4F6;
+        }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'caelum-blue': '#1E40AF',
+              'caelum-dark-blue': '#1E3A8A',
+              'caelum-light-blue': '#BFDBFE',
+              'caelum-gray': '#F3F4F6',
+              'caelum-vibrant-blue': '#0A70F5',
+            },
+            keyframes: {
+              spiny: {
+                '0%': { transform: 'rotateY(0deg)' },
+                '100%': { transform: 'rotateY(360deg)' },
+              },
+              'fade-in-up': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(20px)'
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)'
+                },
+              }
+            },
+            animation: {
+              'spin-y': 'spiny 2s linear infinite',
+              'fade-in-up': 'fade-in-up 0.6s ease-out',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.23.1?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
